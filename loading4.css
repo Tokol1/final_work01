@@ -23,3 +23,13 @@ body{
   
   /*Animation*/
   @-webkit-keyframes dash{ from{stroke-dashoffset:814;} to {stroke-dashoffset:-814;}}
+
+  .fadeout {
+    opacity: 1;
+    animation: fadeout 6.5s;
+  }
+  
+  @keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }

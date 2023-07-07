@@ -59,3 +59,12 @@ html {
       transform: rotate(360deg);
     }
   }
+  .fadeout {
+    opacity: 1;
+    animation: fadeout 6.5s;
+  }
+  
+  @keyframes fadeout {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
