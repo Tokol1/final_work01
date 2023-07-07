@@ -33,7 +33,7 @@
 
 以上の遵守事項を我々は遵守し、使用いたします。
 
-
+http://corp.mihoyo.co.jp/policy/guideline1.html
 
 
 
@@ -70,3 +70,4 @@ We hereby confirm that we will comply with and adhere to the above compliance gu
 
 Please note that this translation is based on the provided Japanese text and may not be an official translation.
 
+http://corp.mihoyo.co.jp/policy/guideline1.html
