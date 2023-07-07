@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./css/enemy_intro.css"/>
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h1 class="logo"><img src="./images/gensin_image_01.png" alt="" /></h1>
+        <div class="toggle"></div>
+      </header>
+
+      <video src="./images/impact.mp4" autoplay muted loop></video>
+
+      <div class="overlay"></div>
+
+    <div class="left box">
+        
+        <button><h2> < </h2></button>
+
+    </div>
+
+    <div class="center box">
+        <div class="text">
+            <h2>Gensin Impact</h2>
+            <h3>HoYo</h3>
+            <p>
+            Experience an immersive single-player campaign. As a traveler from another world, you will embark on a journey to reunite with your long-lost sibling and unravel the mysteries of Teyvat, and yourself.
+            </p>
+
+        </div>
+    </div>
+
+      <div class="right box">
+        
+        <button><h2> > </h2></button>
+
+    </div>
+
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://genshin.hoyoverse.com/ja/">Download</a></li>
+        <li><a href="office.html">Japan Office</a></li>
+        <li><a href="https://www.hoyoverse.com/ja-jp/about-us">About hoyoverse</a></li>
+      </ul>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const showcase = document.querySelector(".showcase");
+
+      menuToggle.addEventListener("click", function () {
+        
+        menuToggle.classList.toggle("active");
+        showcase.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
