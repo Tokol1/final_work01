@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Website</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="./css/enemy_intro.css"/>
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
     <!-- ローカルにあるスクリプトファイルの追加 -->
-    <script src="./js/enemy_intro.js"></script>
+    <!-- <script src="./js/enemy_intro.js"></script> -->
 
   </head>
   <body>
@@ -18,32 +19,29 @@
         <div class="toggle"></div>
       </header>
 
-      <video src="./images/impact.mp4" autoplay muted loop></video>
+      <div class="enemy_intro">
 
-      <div class="overlay"></div>
+        <ul class="slider">
+          <li>
+            <img src="./images/enemy_intro/test1.jpg" alt="">
+            <p>ヒルチャール</p>
+          </li>
+          <!-- <li>
+            <img src="./images/enemy_intro/test2.png" alt="">
+            <p>ヒルチャール</p>
+          </li>
+          <li>
+            <img src="./images/enemy_intro/test3.png" alt="">
+            <p>ヒルチャール</p>
+          </li> -->
 
-    <div class="left box">
-        
-        <button id="leftButton"><h2> < </h2></button>
 
-    </div>
+        </ul>
 
-    <div class="center box">
-        <div class="text">
-            <h2>Gensin Impact</h2>
-            <h3>HoYo</h3>
-            <p>
-            Experience an immersive single-player campaign. As a traveler from another world, you will embark on a journey to reunite with your long-lost sibling and unravel the mysteries of Teyvat, and yourself.
-            </p>
-            <div id="myElement"></div>
-        </div>
-    </div>
 
-      <div class="right box">
-        
-        <button id="rightButton"><h2> > </h2></button>
+      </div>
 
-    </div>
+
 
     </section>
 
@@ -55,7 +53,7 @@
         <li><a href="https://www.hoyoverse.com/ja-jp/about-us">About hoyoverse</a></li>
       </ul>
     </div>
-    <script>
+    <!-- <script>
       const menuToggle = document.querySelector(".toggle");
       const showcase = document.querySelector(".showcase");
 
@@ -64,6 +62,11 @@
         menuToggle.classList.toggle("active");
         showcase.classList.toggle("active");
       });
-    </script>
+    </script> -->
+
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--自作のJS-->
+    <script src="js/test.js"></script> -->
   </body>
 </html>
