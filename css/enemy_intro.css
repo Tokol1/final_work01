@@ -162,29 +162,15 @@
 
 .slider li {
     flex: 0 0 100%;
-    /* q:上記のflexの解説
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 100%;
-    q: 日本語で
-    伸びる量: 0;
-    縮む量: 0;
-    基本サイズ: 100%;
-
-     *
     margin-right: 20px; /* スライド間の余白を調整する場合はここを変更 */
     position: relative;
-    
 }
 
 .enemy_img {
-    position: absolute;
-
     height: 90vh;
     width: auto;
     top: 0;
     left: 0;
-    mix-blend-mode: overlay;
     /*画像の透明度変更*/
     opacity: 0.5;
 }
@@ -196,6 +182,9 @@
     position: absolute;
     top: 0;
     left: 0;
+    margin: 80px;
+    /*テキストの上下を中央に*/
+    transform: translateY(50%);
 }
 
 .text h2 {
