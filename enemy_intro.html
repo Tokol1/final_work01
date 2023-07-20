@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Website</title>
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <link rel="stylesheet" href="./css/enemy_intro.css"/>
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"> -->
-    <!-- ローカルにあるスクリプトファイルの追加 -->
-    <!-- <script src="./js/enemy_intro.js"></script> -->
-
+    <link rel="stylesheet" href="css/enemy_intro.css" />
   </head>
   <body>
     <section class="showcase">
@@ -19,30 +14,27 @@
         <div class="toggle"></div>
       </header>
 
-      <div class="enemy_intro">
-
+      <div class="slider-container">
         <ul class="slider">
           <li>
-            <img src="./images/enemy_intro/test1.jpg" alt="">
-            <p>ヒルチャール</p>
+            <img class="overlay enemy_img" src="images/enemy_intro/enemy_04.webp" alt="">
+            <div class="text">
+              <h2>Pyro Slime</h2>
+              <p>Pyro Slimes are monsters in Genshin Impact. They are a type of Slime that can be found in the wilds of Teyvat. They are weak to Hydro attacks, but resistant to Pyro attacks.</p>
+            </div>
           </li>
-          <!-- <li>
-            <img src="./images/enemy_intro/test2.png" alt="">
-            <p>ヒルチャール</p>
-          </li>
+
           <li>
-            <img src="./images/enemy_intro/test3.png" alt="">
-            <p>ヒルチャール</p>
-          </li> -->
-
-
+            <img class="overlay enemy_img" src="images/enemy_intro/enemys/genshin/pyro_regisvine.png" alt="">
+            <div class="text">
+              <h2>Pyro Regisvine</h2>
+              <p>Pyro Regisvine is a monster in Genshin Impact. It is a giant plant that can be found in the wilds of Teyvat. It is weak to Cryo attacks, but resistant to Pyro attacks.</p> 
+            </div>
+          </li>
         </ul>
-
-
       </div>
 
-
-
+      <div class="overlay"></div>
     </section>
 
     <div class="menu">
@@ -53,7 +45,8 @@
         <li><a href="https://www.hoyoverse.com/ja-jp/about-us">About hoyoverse</a></li>
       </ul>
     </div>
-    <!-- <script>
+
+    <script>
       const menuToggle = document.querySelector(".toggle");
       const showcase = document.querySelector(".showcase");
 
@@ -62,11 +55,6 @@
         menuToggle.classList.toggle("active");
         showcase.classList.toggle("active");
       });
-    </script> -->
-
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!--自作のJS-->
-    <script src="js/test.js"></script> -->
+    </script>
   </body>
 </html>
