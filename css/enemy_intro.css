@@ -103,11 +103,6 @@
     opacity: 0.8;
 }
 
-.enemy_img {
-    height: 100%;
-    width: auto;
-}
-
 .overlay {
     position: absolute;
     top: 0;
@@ -115,9 +110,92 @@
     mix-blend-mode: overlay;
 }
 
-.text {
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a{
+    display: inline-block;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+
+.social li a:hover{
+    transform: translateY(-15px);
+}
+
+@media (max-width: 798px) {
+    .showcase, .showcase header {
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 3rem;
+    }
+
+    .text h3 {
+        font-size: 2rem;
+    }
+}
+
+.slider-container {
     position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slider {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    animation: slide 20s infinite; /* サイズや速度を調整する場合はここを変更 */
+}
+
+.slider li {
+    flex: 0 0 100%;
+    /* q:上記のflexの解説
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    q: 日本語で
+    伸びる量: 0;
+    縮む量: 0;
+    基本サイズ: 100%;
+
+     *
+    margin-right: 20px; /* スライド間の余白を調整する場合はここを変更 */
+    position: relative;
+    
+}
+
+.enemy_img {
+    position: absolute;
+
+    height: 90vh;
+    width: auto;
+    top: 0;
+    left: 0;
+    mix-blend-mode: overlay;
+    /*画像の透明度変更*/
+    opacity: 0.5;
+}
+
+.text {
+    position: absolute;
     z-index: 10;
+    mix-blend-mode: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .text h2 {
@@ -159,60 +237,8 @@
     letter-spacing: 6px;
 }
 
-.social {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-}
-
-.social li {
-    list-style: none;
-}
-
-.social li a{
-    display: inline-block;
-    margin-right: 20px;
-    transition: 0.2s;
-}
-
-.social li a:hover{
-    transform: translateY(-15px);
-}
-
-@media (max-width: 798px) {
-    .showcase, .showcase header {
-        padding: 40px;
-    }
-
-    .text h2 {
-        font-size: 3rem;
-    }
-
-    .text h3 {
-        font-size: 2rem;
-    }
-}
 
 
-.slider-container {
-    position: relative;
-    overflow: hidden;
-}
-  
-.slider {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    animation: slide 10s infinite; /* サイズや速度を調整する場合はここを変更 */
-}
-  
-.slider li {
-    flex: 0 0 100%;
-    margin-right: 20px; /* スライド間の余白を調整する場合はここを変更 */
-    position: relative;
-}
-  
 .slider li:last-child {
     margin-right: 0;
 }
