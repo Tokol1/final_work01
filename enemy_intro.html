@@ -15,7 +15,8 @@
   <body>
     <section class="showcase">
       <header>
-        <h1 class="logo"><img src="./images/gensin_image_01.png" alt="" /></h1>
+        <!-- 超おまけ機能 このロゴをクリックすると，ロゴが光る． 光っている間はスライムをつかめるようになる -->
+        <h1 class="logo"><img class = "logo" src="./images/gensin_image_01.png" alt="" /></h1>
         <div class="toggle"></div>
       </header>
 
@@ -127,12 +128,21 @@
       const menuToggle = document.querySelector(".toggle");
       const showcase = document.querySelector(".showcase");
       const menu = document.querySelector(".menu");
+      const logo = document.querySelector(".logo");
+      const canvas = document.querySelector("#canvas");
+      const carousel = document.querySelector(".carousel");
 
       menuToggle.addEventListener("click", function () {
         
         menuToggle.classList.toggle("active");
         showcase.classList.toggle("active");
         menu.classList.toggle("active");
+      });
+
+      logo.addEventListener("click", function () {
+        carousel.classList.toggle("active");
+        logo.classList.toggle("active");
+        canvas.classList.toggle("active");
       });
     </script>
   </body>
