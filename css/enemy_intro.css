@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    border-radius: 20px;
+}
+
+.logo.active {
+    box-shadow: 0 0 20px 10px #ffffff;
+}
+
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    /* display: flex; */
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.showcase.active {
+    position: absolute;
+    right: 300px;
+}
+
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+.showcase h1 {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.toggle {
+    background: url("../images/menu.png");
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.toggle.active {
+    background: url("../images/close.png");
+    width: 60px;
+    height: 60px;
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+/* ここは最初は消しといて、最後に右のバーに設定する */
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.menu.active {
+    z-index: 10000;
+}
+
+.menu ul {
+    list-style: none;
+    font-size: 24px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #111;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #03a9f4;
+}
+
+
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: overlay;
+}
+
+
+.social {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a{
+    display: inline-block;
+    margin-right: 20px;
+    transition: 0.2s;
+}
+
+.social li a:hover{
+    transform: translateY(-15px);
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: auto;
+}
+
+.slider {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    animation: slide 20s infinite; /* サイズや速度を調整する場合はここを変更 */
+}
+
+.slider li {
+    flex: 0 0 100%;
+    margin-right: 20px; /* スライド間の余白を調整する場合はここを変更 */
+    position: relative;
+}
+
+.enemy_img {
+    position: absolute;
+    display: inline-block;
+    height: 100vh;
+    width: inherit;
+
+    transform: translateX(0);
+    top: 0;
+
+    /*画像の透明度変更*/
+    opacity: 0.4;
+}
+
+.text {
+    position: absolute;
+    z-index: 0;
+    mix-blend-mode: normal;
+    top: 0;
+    left: 0;
+    width: 60vw;
+    margin: 10vw;
+    margin-top: 20vh;
+    /*テキストの上下を中央に*/
+}
+
+.text h2 {
+    font-size: 5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1em;
+}
+
+.text h3 {
+    font-size: 4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1em;
+}
+
+.text p {
+    font-size: 1.5rem;
+    max-width: 50vw;
+    margin: 20px 0;
+    color: #fff;
+}
+
+.text a {
+    display: inline-block;
+    background: #fff;
+    text-decoration: none;
+    color: #111;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.1s;
+}
+
+.text a:hover  {
+    letter-spacing: 6px;
+}
+
+
+
+.slider li:last-child {
+    margin-right: 0;
+}
+
+#canvas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  
+    height: auto;
+  
+    z-index: 0;
+    opacity: 0.5;
+}
+
+#canvas.active {
+    z-index: 999;
+}
+
+@media (max-width: 120vh) {
+    .enemy_img {
+        transform: translateX(-30vh);
+    }
+}
+
+@media (max-width: 500px) {
+    .showcase, .showcase header {
+        padding: 40px;
+    }
+
+    .text h2 {
+        font-size: 3rem;
+    }
+
+    .text h3 {
+        font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1.2rem;
+    }
+
+    .enemy_img {
+        height: auto;
+        width: 100vw;
+        margin-top: 20vh;
+        transform: translateX(0) !important;
+    }
+}
+

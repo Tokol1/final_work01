@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enemy Introductions</title>
+    <link rel="stylesheet" href="css/caroucel_slider.css" />
+    <link rel="stylesheet" href="css/enemy_intro.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <script src="js/slimes.js"></script>
+
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <!-- 超おまけ機能 このロゴをクリックすると，ロゴが光る． 光っている間はスライムをつかめるようになる -->
+        <h1 class="logo"><img class = "logo" src="./images/gensin_image_01.png" alt="" /></h1>
+        <div class="toggle"></div>
+      </header>
+
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+            <img class="enemy_img" src="images/enemy_intro/enemys/genshin/pyro_regisvine.png" alt="">
+            <div class="text">
+              <h2>Pyro Regisvine</h2>
+              <p>Pyro Regisvine is a monster in Genshin Impact. It is a giant plant that can be found in the wilds of Teyvat. It is weak to Cryo attacks, but resistant to Pyro attacks.</p> 
+            </div>
+            <div class="carousel__snapper">
+              <a href="#carousel__slide4"
+                class="carousel__prev">Go to last slide</a>
+              <a href="#carousel__slide2"
+                class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+            <img class="enemy_img" src="images/enemy_intro/enemys/genshin/phaseless_thunder.png" alt="">
+            <div class="text">
+              <h2>Phaseless Thunder</h2>
+              <p>Introduction text</p>
+            </div>
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1"
+              class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide3"
+              class="carousel__next">Go to next slide</a>
+          </li>
+
+          <li id="carousel__slide3"
+              tabindex="0"
+              class="carousel__slide">
+            <img class="enemy_img" src="images/enemy_intro/enemys/genshin/terroershroom.png" alt="">
+            <div class="text">
+              <h2>Jadeplume Terrorshroom</h2>
+              <p>マッシュラプトルは</p> 
+            </div>
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide2"
+              class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide4"
+              class="carousel__next">Go to next slide</a>
+          </li>
+          
+          <li id="carousel__slide4"
+              tabindex="0"
+              class="carousel__slide">
+            <img class="enemy_img" src="images/enemy_intro/enemys/genshin/matrix.png" alt="">
+            <div class="text">
+              <h2>Algorithm of Semi-Intransient Matrix of Overseer Network</h2>
+              <p>Pyro Regisvine is a monster in Genshin Impact. It is a giant plant that can be found in the wilds of Teyvat. It is weak to Cryo attacks, but resistant to Pyro attacks.</p> 
+            </div>
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide3"
+              class="carousel__prev">Go to previous slide</a>
+            <a href="#carousel__slide1"
+              class="carousel__next">Go to first slide</a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1"
+                class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2"
+                class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide3"
+                class="carousel__navigation-button">Go to slide 3</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide4"
+                class="carousel__navigation-button">Go to slide 4</a>
+            </li>
+          </ol>
+
+        </section> 
+      </aside>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="https://genshin.hoyoverse.com/ja/">Download</a></li>
+        <li><a href="office.html">Japan Office</a></li>
+        <li><a href="https://www.hoyoverse.com/ja-jp/about-us">About hoyoverse</a></li>
+        <li><a href="enemy_intro.html">Enemys</a></li>
+      </ul>
+    </div>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+ 
+    <script>
+      window.addEventListener('DOMContentLoaded', main);
+    </script>
+
+    <script>
+      const menuToggle = document.querySelector(".toggle");
+      const showcase = document.querySelector(".showcase");
+      const menu = document.querySelector(".menu");
+      const logo = document.querySelector(".logo");
+      const canvas = document.querySelector("#canvas");
+      const carousel = document.querySelector(".carousel");
+
+      menuToggle.addEventListener("click", function () {
+        
+        menuToggle.classList.toggle("active");
+        showcase.classList.toggle("active");
+        menu.classList.toggle("active");
+      });
+
+      logo.addEventListener("click", function () {
+        carousel.classList.toggle("active");
+        logo.classList.toggle("active");
+        canvas.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
