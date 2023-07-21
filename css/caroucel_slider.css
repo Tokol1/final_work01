@@ -85,7 +85,9 @@ ol, li {
   position: absolute;
   top: 0;
   left: 0;
-
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   height: 100vh;
   width: 177vh;
   /* filter: drop-shadow(0 0 10px #0003);
@@ -204,7 +206,7 @@ ol, li {
 .carousel__prev,
 .carousel__next {
   display: block;
-  position: fixed;
+  position: absolute;
   top: 0;
   margin-top: 37.5vh;
   margin-left: 30px;
@@ -212,7 +214,6 @@ ol, li {
 
   width: 3rem;
   height: 8rem;
-  transform: translateY(-50%);
   border-radius: 5%;
   font-size: 0;
   outline: 0;
@@ -220,19 +221,15 @@ ol, li {
   opacity: 0.8;
 }
 
-.carousel__prev,
-.carousel__next {
-  z-index: 999 !important;
-}
 
 .carousel::before,
 .carousel__prev {
-  left: 0;
+  left: 0vw;
 }
 
 .carousel::after,
 .carousel__next {
-  right: 0;
+  left: 91vw;
 }
 
 .carousel::before,
