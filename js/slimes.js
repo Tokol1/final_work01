@@ -2,6 +2,19 @@ function main() {
   //----------------------------------------------------------------------
   // setup matter.js
   //----------------------------------------------------------------------
+
+  const textures = [
+    "../images/enemy_intro/slimes/Pyro_Silime.webp",
+    "../images/enemy_intro/slimes/Anemo_Slime.webp",
+    "../images/enemy_intro/slimes/Cryo_Slime.webp",
+    "../images/enemy_intro/slimes/Dendro_Slime.webp",
+    "../images/enemy_intro/slimes/Electro_Slime.webp",
+    "../images/enemy_intro/slimes/Electro_Slime2.webp",
+    "../images/enemy_intro/slimes/Geo_Slime.webp",
+    "../images/enemy_intro/slimes/Hydro_Slime.webp",
+  ];
+
+
   const engine = Matter.Engine.create();
   const runner = Matter.Runner.create();
   Matter.Runner.run(runner, engine);
@@ -20,26 +33,6 @@ function main() {
   // content
   //----------------------------------------------------------------------
 
-  const textures = [
-    "../images/enemy_intro/slimes/Pyro_Silime.webp",
-    "../images/enemy_intro/slimes/Anemo_Slime.webp",
-    "../images/enemy_intro/slimes/Cryo_Slime.webp",
-    "../images/enemy_intro/slimes/Dendro_Slime.webp",
-    "../images/enemy_intro/slimes/Electro_Slime.webp",
-    "../images/enemy_intro/slimes/Electro_Slime2.webp",
-    "../images/enemy_intro/slimes/Geo_Slime.webp",
-    "../images/enemy_intro/slimes/Hydro_Slime.webp",
-  ]
-
-  /*groundの解説
-  Matter.Bodies.rectangle(x, y, width, height, options)
-  x: x座標
-  y: y座標
-  width: 幅
-  height: 高さ
-  options: オプション
-  */
-
   const ground = Matter.Bodies.rectangle(canvas.width / 2, canvas.height - 15, canvas.width, 10, { isStatic: true, render: { fillStyle: '#2aa', } });
   
   // マウスでオブジェクトを操作する
@@ -48,16 +41,12 @@ function main() {
   // engine.worldにオブジェクトを追加
   Matter.Composite.add(engine.world, [ground, mouseConstraint]);
 
-  
-
   //10秒ごとに円を追加
   setInterval(function(){
     //0から7までの乱数を生成
     const random = Math.floor(Math.random() * 8);
 
     //円を作成
-      // 解説
-      // Matter.Bodies.circle(x, y, radius, options)
       const slime = Matter.Bodies.circle(canvas.width / 2, 0, 40, {
         render: {
           fillStyle: 'rgba(255, 0, 0, 0.1)',
@@ -70,6 +59,6 @@ function main() {
       });
 
     Matter.Composite.add(engine.world, [slime]);
-  }, 10000);
+  }, 5000);
   
 }
