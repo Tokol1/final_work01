@@ -13,7 +13,7 @@
     width: 100%;
     min-height: 100vh;
     padding: 100px;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     background: #444;
@@ -167,19 +167,21 @@
 }
 
 .enemy_img {
-    height: 90vh;
+    position: absolute;
+    height: 95vh;
+    transform: translateY(-50%);
     width: auto;
     top: 0;
     left: 0;
     /*画像の透明度変更*/
-    opacity: 0.5;
+    /* opacity: 0.5; */
+    mix-blend-mode: overlay;
 }
 
 .text {
     position: absolute;
     z-index: 10;
     mix-blend-mode: normal;
-    position: absolute;
     top: 0;
     left: 0;
     margin: 80px;
