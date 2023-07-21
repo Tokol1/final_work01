@@ -115,15 +115,13 @@ ol, li {
   position: relative;
   flex: 0 0 100%;
   width: 100%;
-  background-color: #f99;
+  /* background-color: #f99; */
   counter-increment: item;
-
-
 }
 
-.carousel__slide:nth-child(even) {
+/* .carousel__slide:nth-child(even) {
   background-color: #99f;
-}
+} */
 
 .carousel__slide:before {
   /*中央の数字表示*/
@@ -231,7 +229,7 @@ ol, li {
 .carousel::after {
   content: '';
   z-index: 1;
-  background-color: #333;
+  /* background-color: #333; */
   background-size: 1.5rem 1.5rem;
   background-repeat: no-repeat;
   background-position: center center;
@@ -242,10 +240,19 @@ ol, li {
   pointer-events: none;
 }
 
-.carousel::before {
+/* .carousel::before {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
 }
 
 .carousel::after {
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+} */
+
+@media (max-width: 798px) {
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    display: none;
+  }
 }
