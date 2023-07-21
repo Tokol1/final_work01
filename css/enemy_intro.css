@@ -251,6 +251,12 @@
     z-index: 999;
 }
 
+.copyright {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
 @media (max-width: 120vh) {
     .enemy_img {
         transform: translateX(-30vh);
