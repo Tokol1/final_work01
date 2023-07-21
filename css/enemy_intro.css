@@ -178,7 +178,7 @@
     left: 0;
     width: 60vw;
     margin: 10vw;
-    margin-top: vh;
+    margin-top: 20vh;
     /*テキストの上下を中央に*/
 }
 
@@ -238,13 +238,16 @@
         padding: 40px;
     }
 
-
     .text h2 {
         font-size: 3rem;
     }
 
     .text h3 {
         font-size: 2rem;
+    }
+
+    .text p {
+        font-size: 1.2rem;
     }
 
     .enemy_img {

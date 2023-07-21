@@ -253,6 +253,10 @@ ol, li {
 }
 
 @media (max-width: 500px) {
+  .carousel {
+    width: 100vw;
+  }
+
   .carousel::before,
   .carousel::after,
   .carousel__prev,
