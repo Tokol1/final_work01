@@ -79,7 +79,7 @@
 }
 
 .menu.active {
-    z-index: 1000;
+    z-index: 10000;
 }
 
 .menu ul {
@@ -225,6 +225,18 @@
 
 .slider li:last-child {
     margin-right: 0;
+}
+
+#canvas {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+  
+    height: auto;
+  
+    z-index: 0;
+    opacity: 0.5;
 }
 
 @media (max-width: 120vh) {

@@ -7,6 +7,10 @@
     <title>Enemy Introductions</title>
     <link rel="stylesheet" href="css/caroucel_slider.css" />
     <link rel="stylesheet" href="css/enemy_intro.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+    <script src="js/slimes.js"></script>
+
   </head>
   <body>
     <section class="showcase">
@@ -112,6 +116,12 @@
         <li><a href="enemy_intro.html">Enemys</a></li>
       </ul>
     </div>
+
+    <canvas id="canvas" width="800" height="600"></canvas>
+ 
+    <script>
+      window.addEventListener('DOMContentLoaded', main);
+    </script>
 
     <script>
       const menuToggle = document.querySelector(".toggle");
