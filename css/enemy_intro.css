@@ -168,8 +168,8 @@
 
 .enemy_img {
     position: absolute;
-    height: 95vh;
-    transform: translateY(-50%);
+    height: 100vh;
+
     width: auto;
     top: 0;
     left: 0;

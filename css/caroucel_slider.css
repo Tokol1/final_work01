@@ -126,7 +126,8 @@ ol, li {
 }
 
 .carousel__slide:before {
-  content: counter(item);
+  /*中央の数字表示*/
+  /* content: counter(item); */
   position: absolute;
   top: 50%;
   left: 50%;
