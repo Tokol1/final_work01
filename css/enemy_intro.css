@@ -16,7 +16,7 @@
     /* display: flex; */
     justify-content: space-between;
     align-items: center;
-    background: #444;
+    background: #222;
     color: #fff;
     transition: 0.5s;
 }
@@ -135,7 +135,7 @@
     position: relative;
     overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: auto;
 }
 
 .slider {
@@ -154,14 +154,16 @@
 
 .enemy_img {
     position: absolute;
+    display: inline-block;
     height: 100vh;
+    width: inherit;
 
-    width: auto;
+    transform: translateX(0);
     top: 0;
-    left: 0;
+
     /*画像の透明度変更*/
-    /* opacity: 0.5; */
-    mix-blend-mode: overlay;
+    opacity: 0.4;
+
 }
 
 .text {
@@ -170,7 +172,8 @@
     mix-blend-mode: normal;
     top: 0;
     left: 0;
-    margin: 80px;
+    width: 60vw;
+    margin: 10vw;
     /*テキストの上下を中央に*/
     transform: translateY(50%);
 }
@@ -192,8 +195,8 @@
 }
 
 .text p {
-    font-size: 1.1rem;
-    max-width: 700px;
+    font-size: 1.5rem;
+    max-width: 50vw;
     margin: 20px 0;
     color: #fff;
 }
@@ -220,10 +223,17 @@
     margin-right: 0;
 }
 
-@media (max-width: 798px) {
+@media (max-width: 120vh) {
+    .enemy_img {
+        transform: translateX(-30vh);
+    }
+}
+
+@media (max-width: 500px) {
     .showcase, .showcase header {
         padding: 40px;
     }
+
 
     .text h2 {
         font-size: 3rem;
@@ -237,5 +247,7 @@
         height: auto;
         width: 100vw;
         margin-top: 20vh;
+        transform: translateX(0) !important;
     }
 }
+
