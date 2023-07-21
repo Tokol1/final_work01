@@ -1,25 +1,38 @@
-$('.slider').slick({
-  autoplay: false,//自動的に動き出すか。初期値はfalse。
-  infinite: true,//スライドをループさせるかどうか。初期値はtrue。
-  slidesToShow: 3,//スライドを画面に3枚見せる
-  slidesToScroll: 3,//1回のスクロールで3枚の写真を移動して見せる
-  prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更
-  nextArrow: '<div class="slick-next"></div>',//矢印部分NextのHTMLを変更
-  dots: true,//下部ドットナビゲーションの表示
-  responsive: [
-    {
-    breakpoint: 769,//モニターの横幅が769px以下の見せ方
-    settings: {
-      slidesToShow: 2,//スライドを画面に2枚見せる
-      slidesToScroll: 2,//1回のスクロールで2枚の写真を移動して見せる
-    }
-  },
-  {
-    breakpoint: 426,//モニターの横幅が426px以下の見せ方
-    settings: {
-      slidesToShow: 1,//スライドを画面に1枚見せる
-      slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
-    }
-  }
-]
-});
+function main() {
+  //----------------------------------------------------------------------
+  // setup matter.js
+  //----------------------------------------------------------------------
+  const engine = Matter.Engine.create();
+  const runner = Matter.Runner.create();
+  Matter.Runner.run(runner, engine);
+
+  // レンダリングを実行するオブジェクトを作成
+  const canvas = document.querySelector('#canvas');
+  const render = Matter.Render.create({
+    canvas, engine,
+    options: { width: canvas.width, height: canvas.height, wireframes: false, background: '#eee', } ,
+  });
+  Matter.Render.run(render);
+
+  //----------------------------------------------------------------------
+  // content
+  //----------------------------------------------------------------------
+  const box = Matter.Bodies.rectangle(400, 200, 80, 80); // 位置x, y, サイズw, h
+  const ball = Matter.Bodies.circle(450, 50, 40); // 位置x, y, 半径r
+  const hexagon = Matter.Bodies.polygon(350, 50, 6, 40); // 位置x, y, 多角形n, 半径r
+  const ground = Matter.Bodies.rectangle(400, 610, 810, 60, { isStatic: true, render: { fillStyle: '#2aa', } });
+  
+  // マウスでオブジェクトを操作する
+  const mouseConstraint = Matter.MouseConstraint.create(engine, { element: canvas });
+  
+  // engine.worldにオブジェクトを追加
+  Matter.Composite.add(engine.world, [box, ball, hexagon, ground, mouseConstraint]);
+
+  //５秒ごとに円を追加
+  setInterval(function(){
+    const ball = Matter.Bodies.circle(450, 50, 40);
+    //円の背景を画像にする
+
+    Matter.Composite.add(engine.world, [ball]);
+  }, 5000);
+}

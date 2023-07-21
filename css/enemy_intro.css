@@ -62,6 +62,7 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+    z-index: 1000;
 }
 
 /* ここは最初は消しといて、最後に右のバーに設定する */
@@ -75,6 +76,10 @@
     justify-content: center;
     align-items: center;
     z-index: -1;
+}
+
+.menu.active {
+    z-index: 1000;
 }
 
 .menu ul {
@@ -163,7 +168,6 @@
 
     /*画像の透明度変更*/
     opacity: 0.4;
-
 }
 
 .text {
@@ -174,8 +178,8 @@
     left: 0;
     width: 60vw;
     margin: 10vw;
+    margin-top: vh;
     /*テキストの上下を中央に*/
-    transform: translateY(50%);
 }
 
 .text h2 {
