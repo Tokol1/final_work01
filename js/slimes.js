@@ -2,6 +2,19 @@ function main() {
   //----------------------------------------------------------------------
   // setup matter.js
   //----------------------------------------------------------------------
+
+  const textures = [
+    "../images/enemy_intro/slimes/Pyro_Silime.webp",
+    "../images/enemy_intro/slimes/Anemo_Slime.webp",
+    "../images/enemy_intro/slimes/Cryo_Slime.webp",
+    "../images/enemy_intro/slimes/Dendro_Slime.webp",
+    "../images/enemy_intro/slimes/Electro_Slime.webp",
+    "../images/enemy_intro/slimes/Electro_Slime2.webp",
+    "../images/enemy_intro/slimes/Geo_Slime.webp",
+    "../images/enemy_intro/slimes/Hydro_Slime.webp",
+  ];
+
+
   const engine = Matter.Engine.create();
   const runner = Matter.Runner.create();
   Matter.Runner.run(runner, engine);
@@ -20,17 +33,6 @@ function main() {
   // content
   //----------------------------------------------------------------------
 
-  const textures = [
-    "../images/enemy_intro/slimes/Pyro_Silime.webp",
-    "../images/enemy_intro/slimes/Anemo_Slime.webp",
-    "../images/enemy_intro/slimes/Cryo_Slime.webp",
-    "../images/enemy_intro/slimes/Dendro_Slime.webp",
-    "../images/enemy_intro/slimes/Electro_Slime.webp",
-    "../images/enemy_intro/slimes/Electro_Slime2.webp",
-    "../images/enemy_intro/slimes/Geo_Slime.webp",
-    "../images/enemy_intro/slimes/Hydro_Slime.webp",
-  ]
-
   /*groundの解説
   Matter.Bodies.rectangle(x, y, width, height, options)
   x: x座標
@@ -47,8 +49,6 @@ function main() {
   
   // engine.worldにオブジェクトを追加
   Matter.Composite.add(engine.world, [ground, mouseConstraint]);
-
-  
 
   //10秒ごとに円を追加
   setInterval(function(){
@@ -70,6 +70,6 @@ function main() {
       });
 
     Matter.Composite.add(engine.world, [slime]);
-  }, 10000);
+  }, 5000);
   
 }
