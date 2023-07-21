@@ -1,5 +1,8 @@
 # 研究開発リテラシー 最終課題のリポジトリです
 
+# pages link
+https://tokol1.github.io/final_work01/
+
 # 目的
 原神をみんなに伝える  
 

@@ -31,7 +31,16 @@ function main() {
     "../images/enemy_intro/slimes/Hydro_Slime.webp",
   ]
 
-  const ground = Matter.Bodies.rectangle(400, 610, 810, 60, { isStatic: true, render: { fillStyle: '#2aa', } });
+  /*groundの解説
+  Matter.Bodies.rectangle(x, y, width, height, options)
+  x: x座標
+  y: y座標
+  width: 幅
+  height: 高さ
+  options: オプション
+  */
+
+  const ground = Matter.Bodies.rectangle(canvas.width / 2, canvas.height - 15, canvas.width, 10, { isStatic: true, render: { fillStyle: '#2aa', } });
   
   // マウスでオブジェクトを操作する
   const mouseConstraint = Matter.MouseConstraint.create(engine, { element: canvas });
@@ -39,22 +48,28 @@ function main() {
   // engine.worldにオブジェクトを追加
   Matter.Composite.add(engine.world, [ground, mouseConstraint]);
 
-  //５秒ごとに円を追加
+  
+
+  //10秒ごとに円を追加
   setInterval(function(){
     //0から7までの乱数を生成
     const random = Math.floor(Math.random() * 8);
 
-    const slime = Matter.Bodies.circle(450, 50, 40, {
-      render: {
-        fillStyle: 'rgba(255, 0, 0, 0.1)',
-        sprite: {
-          texture: textures[random],
-          xScale: 0.12,
-          yScale: 0.12
+    //円を作成
+      // 解説
+      // Matter.Bodies.circle(x, y, radius, options)
+      const slime = Matter.Bodies.circle(canvas.width / 2, 0, 40, {
+        render: {
+          fillStyle: 'rgba(255, 0, 0, 0.1)',
+          sprite: {
+            texture: textures[random],
+            xScale: 0.12,
+            yScale: 0.12
+          }
         }
-      } 
-    }); // 位置x, y, 半径r
-  
+      });
+
     Matter.Composite.add(engine.world, [slime]);
-  }, 5000);
+  }, 10000);
+  
 }
