@@ -23,8 +23,6 @@ function main() {
     });
   }
 
-  const a = new Image(    "../images/enemy_intro/slimes/Hydro_Slime.webp");
-
   const engine = Matter.Engine.create();
   const runner = Matter.Runner.create();
   Matter.Runner.run(runner, engine);
@@ -67,7 +65,7 @@ function main() {
       //10秒ごとに円を追加
       setInterval(function(){
         //0から7までの乱数を生成
-        random = Math.floor(Math.random() * 8);
+        let random = Math.floor(Math.random() * 8);
   
         //円を作成
         const slime = Matter.Bodies.circle(canvas.width / 2, 0, 40, {
@@ -80,7 +78,8 @@ function main() {
             }
           }
         });
-        slime.onload;
+
+        let i = loadImage(textures[random]);
         Matter.Composite.add(engine.world, [slime]);
       }, 5000);  
   
