@@ -29,7 +29,7 @@
 }
 
 @keyframes snap {
-  96% {
+  90% {
     scroll-snap-align: center;
   }
   97% {
@@ -85,6 +85,7 @@ ol, li {
   top: 0;
   left: 0;
   right: 0;
+
   margin-left: auto;
   margin-right: auto;
   height: 100vh;
@@ -257,6 +258,7 @@ ol, li {
 
 @media (max-width: 500px) {
   .carousel {
+    height: 100vh;
     width: 100vw;
   }
 

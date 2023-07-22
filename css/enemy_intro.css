@@ -175,7 +175,7 @@
     top: 0;
 
     /*画像の透明度変更*/
-    opacity: 0.4;
+    opacity: 0.7;
 }
 
 .text {
@@ -269,7 +269,7 @@
     }
 
     .text h2 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .text h3 {
@@ -277,14 +277,18 @@
     }
 
     .text p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .enemy_img {
-        height: auto;
-        width: 100vw;
-        margin-top: 20vh;
-        transform: translateX(0) !important;
+        height: 100vw;
+        width: 177.7vw;
+        top: 0;
+        left: 0;
+        bottom: 0;
+
+        transform-origin: 25% 56%;
+        transform: rotate(90deg);
     }
 }
 
