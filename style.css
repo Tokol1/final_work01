@@ -52,6 +52,9 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+
+    border: solid 5px #333;
+    border-radius: 10%;
 }
 
 
