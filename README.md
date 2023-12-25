@@ -1,4 +1,5 @@
 # 研究開発リテラシー 最終課題のリポジトリです
+研究開発リテラシーとは大学の授業である。
 
 # pages link
 https://tokol1.github.io/final_work01/
